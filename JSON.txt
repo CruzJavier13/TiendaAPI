@@ -1,0 +1,33 @@
+ventas
+[
+    {
+        "ventaID": 1,
+        "codigoventa": "9",
+        "estado": true,
+        "empleado": 3,
+        "cliente": 4,
+        "producto": 1,
+        "fecha": "2023-04-16",
+        "formapago": "tarjeta de debito",
+        "descuento": 0.0,
+        "preciounidad": 93.30,
+        "cantidad": 1,
+        "impuesto": 13.995,
+        "total": 107.295
+    },
+    {
+        "ventaID": 2,
+        "codigoventa": "9",
+        "estado": true,
+        "empleado": 3,
+        "cliente": 4,
+        "producto": 5,
+        "fecha": "2023-04-16",
+        "formapago": "tarjeta de credito",
+        "descuento": 0.0,
+        "preciounidad": 120.00,
+        "cantidad": 1,
+        "impuesto": 18,
+        "total": 138
+    }
+]

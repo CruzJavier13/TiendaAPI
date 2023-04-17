@@ -1,0 +1,96 @@
+﻿@model IEnumerable<Ventas.Models.tbl_cliente>
+
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Nuevo Cliente</h2>
+
+<p>
+    @Html.ActionLink("Crear Cliente", "Create", "Cliente")
+    @*@Html.ActionLink("Crear Cliente", "Create", "Cliente", new { vista = "CrearCliente" }, null)*@
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.clienteID)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.estado)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.nombres)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.apellidos)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.cedula)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.sexo)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.direccion)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.telefono)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.correo)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.fecharegistro)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.fechamodificacion)
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.clienteID)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.estado)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.nombres)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.apellidos)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.cedula)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.sexo)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.direccion)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.telefono)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.correo)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.fecharegistro)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.fechamodificacion)
+            </td>
+            <td>
+                @Html.ActionLink("Editar", "Edit", item)
+                @*@Html.ActionLink("Details", "Details", new { id = item.clienteID }) |*@
+                @Html.ActionLink("Eliminar", "Delete", item)
+            </td>
+        </tr>
+    }
+
+</table>
